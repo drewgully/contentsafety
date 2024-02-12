@@ -7,7 +7,7 @@
 # --------------------------------------------------------------------------
 
 
-def analyze_text():
+def analyze_text(text):
     # [START analyze_text]
 
     import os
@@ -24,7 +24,7 @@ def analyze_text():
     client = ContentSafetyClient(endpoint, AzureKeyCredential(key))
 
     # Construct a request
-    request = AnalyzeTextOptions(text="You are an idiot")
+    request = AnalyzeTextOptions(text=text)
 
     # Analyze text
     try:
